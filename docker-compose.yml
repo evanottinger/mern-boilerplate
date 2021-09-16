@@ -6,3 +6,11 @@ services:
       - "27017:27017"
     volumes:
       - ../data:/data/db
+    links:
+      - mongo-express
+  mongo-express:
+    build: mongo-express
+    environment:
+      - ME_CONFIG_MONGODB_SERVER=db
+    ports:
+      - "8081:8081"
