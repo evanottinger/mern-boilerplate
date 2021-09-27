@@ -1,4 +1,0 @@
-FROM mongo
-
-EXPOSE 27017
-ENTRYPOINT [ "mongod" ]
